@@ -9,7 +9,6 @@ inherit git-2 user
 
 DESCRIPTION="An HTML5 management interface for KVM"
 HOMEPAGE="https://github.com/kimchi-project/kimchi"
-#EGIT_REPO_URI="https://github.com/kimchi-project/kimchi.git"
 SRC_URI="https://github.com/kimchi-project/${PN}/archive/${PV}.tar.gz -> ${PN}.tar.gz"
 
 LICENSE="LGPL-3"
