@@ -5,7 +5,7 @@
 EAPI="5"
 PYTHON_DEPEND="2"
 
-inherit git-2 user
+inherit user
 
 DESCRIPTION="An HTML5 management interface for KVM"
 HOMEPAGE="https://github.com/kimchi-project/kimchi"
