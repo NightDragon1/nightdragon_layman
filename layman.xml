@@ -2,7 +2,7 @@
 <!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
 <repositories xmlns="" version="1.0">
   <repo quality="experimental" status="unofficial">
-    <name>nightdragon-layman</name>
+    <name>nightdragon_layman</name>
     <description lang="en">NightDragon's overlay</description>
     <homepage>https://github.com/NightDragon1/nightdragon_layman</homepage>
     <owner type="person">
