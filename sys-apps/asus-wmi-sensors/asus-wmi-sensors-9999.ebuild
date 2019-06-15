@@ -25,9 +25,10 @@ src_compile() {
 
 	einfo "Check Kernel Version..."
 	if [ [KV_MAJOR -ge 4] && [KV_MINOR -ge 20] ]; then
- 		e_warn "bla bla"
+ 		ewarn "bla bla"
 	 else 
- 		e_warn "You need a kernel version euqal or later to 4.12!"
+ 		eerror "You need a kernel version euqal or later to 4.12!"
+	    die
 	 fi
 
 }
