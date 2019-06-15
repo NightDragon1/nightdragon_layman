@@ -57,7 +57,7 @@ src_compile() {
 
 src_install() {
 	default
-	use modules && linux-mod_src_install
+	#linux-mod_src_install
 }
 
 pkg_preinst() {
