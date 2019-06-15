@@ -30,7 +30,7 @@ pkg_pretend() {
 		die
 	fi
 	# Kernel Version check
-	if [ [ ${KV_MAJOR} -le 4 ] && [ ${KV_MINOR} -lt 100 ] ]; then
+	if [ ${KV_MAJOR} -le 4 ] && [ ${KV_MINOR} -lt 100 ]; then
 		eerror "Found kernel version ${KV_MAJOR}.${KV_MINOR}, but need 4.12 or higher!"
 	    die
 	fi
