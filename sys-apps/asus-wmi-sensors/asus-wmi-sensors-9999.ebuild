@@ -32,7 +32,7 @@ pkg_pretend() {
 	CONFIG_CHECK="HWMON ACPI_WMI"
 	linux-info_pkg_setup
 	# Kernel Version check
-	if kernel_is ge 4 12; then
+	if kernel_is lt 4 12; then
 		eerror "Found kernel version ${KV_MAJOR}.${KV_MINOR}, but need 4.12 or higher!"
 	    die
 	fi
