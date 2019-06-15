@@ -55,6 +55,6 @@ src_compile() {
 }
 
 src_install() {
-#	default
+	default
 	linux-mod_src_install
 }
