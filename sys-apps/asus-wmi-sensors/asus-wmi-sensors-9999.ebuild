@@ -54,7 +54,6 @@ src_compile() {
 	emake || die "Make failed!"
 }
 
-src_install() {
-	default
+pkg_postinst() {
 	linux-mod_src_install
 }
