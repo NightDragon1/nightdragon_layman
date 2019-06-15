@@ -13,7 +13,7 @@ SRC_URI="https://github.com/kimchi-project/${PN}/archive/${PV}.tar.gz -> ${PN}.t
 
 LICENSE="LGPL-3"
 SLOT="0"
-KEYWORDS="amd64 x86 ~amd64 ~x86"
+KEYWORDS="**"
 IUSE=""
 
 DEPEND="

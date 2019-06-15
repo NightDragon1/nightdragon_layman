@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>nightdragon@gmx.at</email>
+		<name>NightDragon</name>
+	</maintainer>
+	<longdescription lang="en">
+		This is a lm_sensors modul for the following mainboards:
+		Asus ROG Crosshair Hero VII (WiFi), BIOS 1002 or newer
+		Asus ROG Crosshair Hero VII, BIOS 1002 or newer
+		Asus ROG Crosshair Hero VI, BIOS 6301 or newer
+		Asus ROG Crosshair Hero VI (WiFi), BIOS 6302 or newer
+		ASUS Zenith Extreme, BIOS 1607/1701 or newer
+		ASUS Zenith Extreme Alpha, ???
+		Prime X399-A, BIOS 1002 or newer
+		Prime X470-Pro, BIOS 4602 or newer
+	
+		The following boards are not tested yet:
+		ASUS ROG STRIX B450/X470 (e.g. Strix B450-F)
+		Prime B450-Plus
+		ASUS ROG CROSSHAIR VI EXTREME
+	</longdescription>
+</pkgmetadata>

@@ -10,7 +10,7 @@ HOMEPAGE="https://github.com/electrified/asus-wmi-sensors"
 #SRC_URI=""
 EGIT_REPO_URI="https://github.com/electrified/asus-wmi-sensors"
 
-LICENSE="GPL-2.0"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64 ~x86"
 IUSE=""
@@ -31,14 +31,14 @@ pkg_pretend() {
 	fi
 	# Kernel Version check
 	if [ [ ${KV_MAJOR} -le 4 ] && [ ${KV_MINOR} -lt 100 ] ]; then
- 		eerror "Found kernel version ${KV_MAJOR}.${KV_MINOR}, but need 4.12 or higher!"
+		eerror "Found kernel version ${KV_MAJOR}.${KV_MINOR}, but need 4.12 or higher!"
 	    die
 	fi
 	# Kenerl config check
 	if [ ! linux_config_exists ]; then
 		eerror "Kernel config file (.config) not found!"
 		die
-	elif  [ ! check_modules_supported ]; then 
+	elif  [ ! check_modules_supported ]; then
 		eerror "This kernel does not support modules!"
 		die
 	else
