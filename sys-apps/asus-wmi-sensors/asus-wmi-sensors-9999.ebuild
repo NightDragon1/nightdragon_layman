@@ -18,7 +18,7 @@ DEPEND="sys-apps/lm_sensors"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-S="${WORKDIR}/${PV}"
+S="${WORKDIR}/${PN}"
 
 pkg_pretend() {
 	einfo "Checking preconditions..."
