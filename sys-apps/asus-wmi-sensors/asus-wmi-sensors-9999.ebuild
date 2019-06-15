@@ -46,6 +46,10 @@ pkg_pretend() {
 	MODULE_NAMES="asus-wmi-sensors(hwmon:${S})"
 }
 
+src_compile() {
+	emake
+}
+
 src_install() {
 	linux-mod_src_install
 }
