@@ -29,11 +29,10 @@ pkg_pretend() {
 		eerror "Kernel sources not found!"
 		die
 	fi
-
-	get_version
-	get_running_version
+	CONFIG_CHECK="HWMON ACPI_WMI"
+	linux-info_pkg_setup
 	# Kernel Version check
-	if ( [[ ${KV_MAJOR} -le 4 ]] && [[ ${KV_MINOR} -lt 100 ]] ); then
+	if kernel_is ge 4 12; then
 		eerror "Found kernel version ${KV_MAJOR}.${KV_MINOR}, but need 4.12 or higher!"
 	    die
 	fi
@@ -44,13 +43,6 @@ pkg_pretend() {
 	elif  [ ! check_modules_supported ]; then
 		eerror "This kernel does not support modules!"
 		die
-	else
-		ebegin "Checking for CONFIG_HWMON enabled"
-			linux_chkconfig_present HWMON
-		eend $?
-		ebegin "Checking for CONFIG_ACPI_WMI support enabled"
-			linux_chkconfig_present ACPI_WMI
-		eend $?
 	fi
 }
 
