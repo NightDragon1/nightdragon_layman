@@ -40,7 +40,7 @@ pkg_pretend() {
 	fi
 
 	ebegin "Checking for CONFIG_HWMON enabled"
-		inux_chkconfig_present HWMON
+		linux_chkconfig_present HWMON
 	eend $?
 	ebegin "Checking for CONFIG_ACPI_WMI support enabled"
 		linux_chkconfig_present ACPI_WMI
