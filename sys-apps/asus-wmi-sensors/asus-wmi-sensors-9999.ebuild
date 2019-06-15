@@ -18,7 +18,7 @@ DEPEND="sys-apps/lm_sensors"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-BUILD_TARGETS="all"
+BUILD_TARGETS="modules"
 
 pkg_pretend() {
 	einfo "Checking preconditions..."
