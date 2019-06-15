@@ -30,7 +30,11 @@ pkg_pretend() {
 	    die
 	fi
 	# Kenerl config check
-	if [ ! linux_config_exists ] || [ ! linux_config_src_exists ]; then
+	if [ ! linux_config_exists ]; then
+		eerror "Kernel sources not found!"
+		die
+	fi
+	if [ ! linux_config_src_exists ]; then
 		eerror "Kernel sources or kernel config not found!"
 		die
 	fi
