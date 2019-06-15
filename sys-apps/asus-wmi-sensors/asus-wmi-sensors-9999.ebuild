@@ -47,8 +47,6 @@ pkg_pretend() {
 }
 
 src_configure() {
-	#unset ARCH
-	#default
 	set_arch_to_kernel
 }
 
@@ -57,5 +55,6 @@ src_compile() {
 }
 
 src_install() {
+	default
 	linux-mod_src_install
 }
