@@ -8,7 +8,7 @@ inherit eutils git-r3 linux-mod linux-info
 DESCRIPTION="Linux HWMON (lmsensors) sensors driver for some ASUS Ryzen Motherboards"
 HOMEPAGE="https://github.com/electrified/asus-wmi-sensors"
 #SRC_URI=""
-EGIT_REPI_URI="https://github.com/electrified/asus-wmi-sensors"
+EGIT_REPO_URI="https://github.com/electrified/asus-wmi-sensors"
 
 LICENSE="GPL-2.0"
 SLOT="0"
