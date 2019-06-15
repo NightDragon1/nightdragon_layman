@@ -21,15 +21,18 @@ BDEPEND=""
 
 S=${WORKDIR}/${MY_PN}
 
-src_compile() {
-
-	einfo "Check Kernel Version..."
-	if [ [ ${KV_MAJOR} -ge 4 ] && [ ${KV_MINOR} -ge 100 ] ]; then
- 		ewarn "bla bla"
-	 else 
- 		eerror "You are using kernel version ${KV_MAJOR}.${KV_MINOR}.\n You need a kernel version euqal or later to 4.12!"
+pkg_pretend() {
+	einfo "Checking preconditions..."
+	if [ [ ${KV_MAJOR} -le 4 ] && [ ${KV_MINOR} -lt 100 ] ]; then
+ 		eerror "Found kernel version ${KV_MAJOR}.${KV_MINOR}, but need 4.12 or higher!"
 	    die
 	 fi
+
+}
+
+src_compile() {
+	ebegin "Compiling..."
+	eend $?
 
 }
 
