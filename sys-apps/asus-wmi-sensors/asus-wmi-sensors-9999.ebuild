@@ -18,7 +18,7 @@ DEPEND="sys-apps/lm_sensors"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-S=${WORKDIR}
+S="${WORKDIR}/${PV}"
 
 pkg_pretend() {
 	einfo "Checking preconditions..."
@@ -46,13 +46,6 @@ pkg_pretend() {
 	MODULE_NAMES="asus-wmi-sensors(hwmon:${S})"
 }
 
-src_compile() {
-	ebegin "Compiling..."
-	eend $?
-
-}
-
 src_install() {
-	einfo "Install Module..."
 	linux-mod_src_install
 }
