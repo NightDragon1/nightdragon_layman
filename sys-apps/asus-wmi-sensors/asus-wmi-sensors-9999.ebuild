@@ -46,8 +46,14 @@ pkg_pretend() {
 	MODULE_NAMES="asus-wmi-sensors(hwmon:${S})"
 }
 
+src_configure() {
+	#unset ARCH
+	#default
+	set_arch_to_kernel
+}
+
 src_compile() {
-	emake
+	emake || die "Make failed!"
 }
 
 src_install() {
