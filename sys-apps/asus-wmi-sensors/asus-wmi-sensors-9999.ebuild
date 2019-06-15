@@ -29,7 +29,6 @@ pkg_pretend() {
 		eerror "Kernel sources not found!"
 		die
 	fi
-
 	# Kernel Version check
 	if [ [ ${KV_MAJOR} -le 4 ] && [ ${KV_MINOR} -lt 100 ] ]; then
  		eerror "Found kernel version ${KV_MAJOR}.${KV_MINOR}, but need 4.12 or higher!"
@@ -39,8 +38,7 @@ pkg_pretend() {
 	if [ ! linux_config_exists ]; then
 		eerror "Kernel config file (.config) not found!"
 		die
-	fi
-	if [ ! check_modules_supported ]; then 
+	elif  [ ! check_modules_supported ]; then 
 		eerror "This kernel does not support modules!"
 		die
 	fi
