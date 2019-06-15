@@ -43,7 +43,7 @@ pkg_pretend() {
 		eerror "This kernel does not support modules!"
 		die
 	fi
-	MODULE_NAMES="asus-wmi-sensors(hwmon:${S})"
+	MODULE_NAMES="asus-wmi-sensors(misc:${S})"
 }
 
 src_configure() {
