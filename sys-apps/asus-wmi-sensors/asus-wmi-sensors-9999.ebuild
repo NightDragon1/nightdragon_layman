@@ -7,7 +7,6 @@ inherit eutils git-r3 linux-mod linux-info
 
 DESCRIPTION="Linux HWMON (lmsensors) sensors driver for some ASUS Ryzen Motherboards"
 HOMEPAGE="https://github.com/electrified/asus-wmi-sensors"
-#SRC_URI=""
 EGIT_REPO_URI="https://github.com/electrified/asus-wmi-sensors"
 
 LICENSE="GPL-2"
@@ -15,7 +14,7 @@ SLOT="0"
 KEYWORDS="amd64 ~x86"
 IUSE=""
 
-DEPEND=""
+DEPEND="sys-apps/lm_sensors"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
@@ -44,15 +43,16 @@ pkg_pretend() {
 		eerror "This kernel does not support modules!"
 		die
 	fi
+	MODULE_NAMES="asus-wmi-sensors(hwmon:${S})"
 }
 
 src_compile() {
 	ebegin "Compiling..."
-	die
 	eend $?
 
 }
 
 src_install() {
 	einfo "Install Module..."
+	linux-mod_src_install
 }
