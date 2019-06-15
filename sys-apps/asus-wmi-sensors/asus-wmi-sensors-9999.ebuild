@@ -51,6 +51,7 @@ src_configure() {
 }
 
 src_compile() {
+	BUILD_TARGETS="all"
 	emake || die "Make failed!"
 }
 
