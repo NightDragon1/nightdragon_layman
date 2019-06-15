@@ -18,7 +18,7 @@ DEPEND="sys-apps/lm_sensors"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-S="${WORKDIR}/${P}"
+#S="${WORKDIR}/${P}"
 
 pkg_pretend() {
 	einfo "Checking preconditions..."
@@ -55,6 +55,6 @@ src_compile() {
 }
 
 src_install() {
-	default
+#	default
 	linux-mod_src_install
 }
