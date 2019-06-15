@@ -41,14 +41,14 @@ pkg_pretend() {
 	elif  [ ! check_modules_supported ]; then 
 		eerror "This kernel does not support modules!"
 		die
+	else
+		ebegin "Checking for CONFIG_HWMON enabled"
+			linux_chkconfig_present HWMON
+		eend $?
+		ebegin "Checking for CONFIG_ACPI_WMI support enabled"
+			linux_chkconfig_present ACPI_WMI
+		eend $?
 	fi
-
-	ebegin "Checking for CONFIG_HWMON enabled"
-		linux_chkconfig_present HWMON
-	eend $?
-	ebegin "Checking for CONFIG_ACPI_WMI support enabled"
-		linux_chkconfig_present ACPI_WMI
-	eend $?
 }
 
 src_compile() {
