@@ -23,11 +23,28 @@ S=${WORKDIR}/${MY_PN}
 
 pkg_pretend() {
 	einfo "Checking preconditions..."
+
+	# Kernel Version check
 	if [ [ ${KV_MAJOR} -le 4 ] && [ ${KV_MINOR} -lt 100 ] ]; then
  		eerror "Found kernel version ${KV_MAJOR}.${KV_MINOR}, but need 4.12 or higher!"
 	    die
-	 fi
+	fi
+	# Kenerl config check
+	if [ ! linux_config_src_exists ]; then
+		eerror "Can not find kernel configuration (.config)"
+		die
+	fi
+	if [ ! check_modules_supported ]; then 
+		eerror "This kernel does not support modules!"
+		die
+	fi
 
+	ebegin "Checking for CONFIG_HWMON enabled"
+		inux_chkconfig_present HWMON
+	eend $?
+	ebegin "Checking for CONFIG_ACPI_WMI support enabled"
+		linux_chkconfig_present ACPI_WMI
+	eend $?
 }
 
 src_compile() {
