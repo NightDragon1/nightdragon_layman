@@ -18,7 +18,7 @@ DEPEND="sys-apps/lm_sensors"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-BUILD_TARGETS="modules"
+BUILD_TARGETS="clean modules"
 
 pkg_pretend() {
 	einfo "Checking preconditions..."
@@ -54,8 +54,7 @@ src_configure() {
 }
 
 src_compile() {
-	#emake || die "Make failed!"
-	linux-mod_src_compile
+	emake || die "Make failed!"
 }
 
 src_install() {
