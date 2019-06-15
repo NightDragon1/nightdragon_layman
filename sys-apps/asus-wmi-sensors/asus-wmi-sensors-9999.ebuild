@@ -24,10 +24,10 @@ S=${WORKDIR}/${MY_PN}
 src_compile() {
 
 	einfo "Check Kernel Version..."
-	if [ [KV_MAJOR -ge 4] && [KV_MINOR -ge 20] ]; then
+	if [ [KV_MAJOR -ge 4] && [KV_MINOR -ge 12] ]; then
  		ewarn "bla bla"
 	 else 
- 		eerror "You are using kernel version".KV_MAJOR.".".KV_MINOR.".
+ 		eerror "You are using kernel version"+KV_MAJOR+"."+KV_MINOR+".
 		You need a kernel version euqal or later to 4.12!"
 	    die
 	 fi
