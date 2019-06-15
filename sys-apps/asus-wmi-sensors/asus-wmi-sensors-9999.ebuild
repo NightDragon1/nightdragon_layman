@@ -30,8 +30,8 @@ pkg_pretend() {
 	    die
 	fi
 	# Kenerl config check
-	if [ ! linux_config_src_exists ]; then
-		eerror "Can not find kernel configuration (.config)"
+	if [ ! linux_config_exists ] || [ ! linux_config_src_exists ]; then
+		eerror "Kernel sources or kernel config not found!"
 		die
 	fi
 	if [ ! check_modules_supported ]; then 
