@@ -49,6 +49,7 @@ pkg_pretend() {
 
 src_compile() {
 	ebegin "Compiling..."
+	die
 	eend $?
 
 }
