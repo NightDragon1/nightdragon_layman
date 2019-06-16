@@ -19,6 +19,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 BUILD_TARGETS="clean modules"
+MODULE_NAMES="asus-wmi-sensors(hwmon:${S})"
 
 pkg_pretend() {
 	einfo "Checking preconditions..."
@@ -43,7 +44,6 @@ pkg_pretend() {
 		eerror "This kernel does not support modules!"
 		die
 	fi
-	MODULE_NAMES="asus-wmi-sensors(hwmon:${S})"
 }
 
 src_configure() {
