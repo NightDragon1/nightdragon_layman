@@ -54,11 +54,12 @@ src_configure() {
 }
 
 src_compile() {
-	emake || die "Make failed!"
+	#emake || die "Make failed!"
+	use modules && linux-mod_src_compile
 }
 
 src_install() {
-	linux-mod_src_install
+	use modules && linux-mod_src_install
 }
 
 pkg_preinst() {
