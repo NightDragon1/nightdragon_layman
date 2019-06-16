@@ -46,6 +46,10 @@ pkg_pretend() {
 	fi
 }
 
+pkg_setup() {
+	linux-mod_pkg_setup
+}
+
 src_configure() {
 	set_arch_to_kernel
 	if [[ -x ${ECONF_SOURCE:-.}/configure ]] ; then
