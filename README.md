@@ -26,7 +26,7 @@ or:
 layman -o https://github.com/NightDragon1/nightdragon_layman/master/layman.xml -f -a nightdragon_layman
 ```
 
-## For updating your local version with the most up to date repository run
+### Updating the local repo
 ```bash
 layman -S
 ```
