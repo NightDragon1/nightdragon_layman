@@ -23,7 +23,7 @@ eselect repository add nightdragon_layman git https://github.com/NightDragon1/ni
 ```
 or:
 ```bash
-layman -o https://github.com/NightDragon1/nightdragon_layman/master/layman.xml -f -a nightdragon_layman
+layman -o https://raw.githubusercontent.com/NightDragon1/nightdragon_layman/master/layman.xml -f -a nightdragon_layman
 ```
 
 ### Updating the local repo
