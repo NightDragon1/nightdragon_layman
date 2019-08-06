@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 BUILD_TARGETS="clean modules"
-MODULE_NAMES="asus-wmi-sensors(kernel/drivers/hwmon:${S})"
+MODULE_NAMES="hwmon-it87(kernel/drivers/hwmon:${S})"
 
 pkg_pretend() {
 	einfo "Checking preconditions..."
