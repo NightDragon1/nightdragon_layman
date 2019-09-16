@@ -2,7 +2,7 @@
 This is a layman repo for Gentoo Linux, maintaned by NightDragon.
 
 ## License
-All files within this repo are released under the [GPLv2].
+All files, if not specified something else for a folder branch, within this repo are released under the [GPLv2].
 
 # Disclaimer
 All information on this website or any repsoitory within - https://github.com/NightDragon1 - is published in good faith and for non commercial use only. This repository does not make any warranties about the completeness, reliability and accuracy of the content. Any action you take upon the content you find on this repository, is strictly at your own risk. The author will not be liable for any losses and/or damages in connection with the use of it.
