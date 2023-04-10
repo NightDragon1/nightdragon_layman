@@ -9,11 +9,7 @@
       <email>nightdragon@gmx.at</email>
       <name>NightDragon</name>
     </owner>
-    <source type="git">
-      <remote protocol="https" name="origin" fetch="https://github.com/NightDragon1/nightdragon_layman.git" />
-      <uri namespace="/" name="nightdragon_layman.git" />
-      <branch name="master" />
-    </source>
+    <source type="git">https://github.com/NightDragon1/nightdragon_layman.git</source>
     <feed>https://github.com/NightDragon1/nightdragon_layman/commits/master.atom</feed>
   </repo>
 </repositories>
