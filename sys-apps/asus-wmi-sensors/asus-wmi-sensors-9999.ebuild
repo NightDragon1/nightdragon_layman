@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit eutils git-r3 linux-mod linux-info
+inherit git-r3 linux-mod linux-info
 
 DESCRIPTION="Linux HWMON (lmsensors) sensors driver for some ASUS Ryzen Motherboards"
 HOMEPAGE="https://github.com/electrified/asus-wmi-sensors"
