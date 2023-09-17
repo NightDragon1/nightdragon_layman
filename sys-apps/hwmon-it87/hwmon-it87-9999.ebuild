@@ -1,9 +1,9 @@
 # Copyright 2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=7
+EAPI=8
 
-inherit eutils git-r3 linux-mod linux-info
+inherit git-r3 linux-mod linux-info
 
 DESCRIPTION="Linux HWMON (lmsensors) sensors driver for ASus Prime X399-A (pwm controls too)"
 HOMEPAGE="https://github.com/NightDragon1/hwmon-it87"
